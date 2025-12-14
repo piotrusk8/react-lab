@@ -5,6 +5,13 @@ import {useState} from "react";
 function App() {
     const [title, setTitle] = useState('Back to the kitchen');
 
+    const movies = [
+    {title: "Wall-E"},
+    {title: "Pulp Fiction"},
+    {title: "Matrix"},
+    {title: "1670"},
+];
+
     function handleChange(event) {
         setTitle(event.target.value);
     }
@@ -26,6 +33,9 @@ function App() {
 
     return (
         <div>
+            <ul>
+    {movies.map((movie) => <li key={movie.title}>{movie.title}</li>)}
+            </ul>
             <h1>My favourite movies to watch</h1>
             <h2>Movie to watch today</h2>
             <div>{message}</div>
