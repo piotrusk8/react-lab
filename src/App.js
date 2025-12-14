@@ -1,7 +1,8 @@
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
-    let title = '1670';
+    let title = 'Katoshi Kamikaze';
 
     function handleChange(event) {
         console.log(event.target.value);
